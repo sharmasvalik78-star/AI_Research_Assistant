@@ -13,24 +13,25 @@ import {
 export default function Dashboard() {
 
   const [question, setQuestion] = useState("");
-const [messages, setMessages] = useState([]);
-const [loading, setLoading] = useState(false);
+  const [messages, setMessages] = useState([]);
+  const [loading, setLoading] = useState(false);
+  // activities is initialized below (used for Recent Activity)
 
-const askQuestion = async () => {
-  if (!question.trim()) return;
+  const askQuestion = async () => {
 
-  // Add user message
-  const userMessage = {
-    type: "user",
-    text: question,
-  };
-  
-  setActivities((prev) => [
-  `💬 Asked: ${question}`,
-  ...prev,
-]);
+    if (!question.trim()) return;
 
-  setMessages((prev) => [...prev, userMessage]);
+
+    // Add user message
+    const userMessage = {
+      type: "user",
+      text: question,
+    };
+
+    setActivities((prev) => [`💬 Asked: ${question}`, ...prev]);
+
+    setMessages((prev) => [...prev, userMessage]);
+
 
   try {
     setLoading(true);
