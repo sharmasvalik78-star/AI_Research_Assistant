@@ -1,0 +1,34 @@
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Frontend build
+frontend/dist/
+dist/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# ChromaDB / local data
+backend/chroma_db/
+backend/chroma_db_backup/
+backend/chroma_db_new/
+backend/chroma_db_test/
+
+# Local uploads
+backend/uploads/
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/

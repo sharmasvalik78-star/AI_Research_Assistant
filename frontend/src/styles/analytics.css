@@ -1,0 +1,715 @@
+.analytics-page {
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* ===========================
+   Premium Header
+=========================== */
+
+.analytics-header {
+  background: linear-gradient(135deg, #ffffff, #f8fbff);
+  border: 1px solid #e5e7eb;
+  border-radius: 22px;
+  padding: 34px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+}
+
+.analytics-header-left {
+  flex: 1;
+}
+
+.analytics-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: #eef4ff;
+  color: #2563eb;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.analytics-header h1 {
+  margin: 0;
+  font-size: 38px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.analytics-header p {
+  margin-top: 12px;
+  color: #6b7280;
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 700px;
+}
+
+.analytics-header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.analytics-filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  padding: 12px 16px;
+}
+
+.analytics-filter select {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.analytics-export-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all .25s ease;
+}
+
+.analytics-export-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/* ===========================
+   Sections
+=========================== */
+
+.analytics-section {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.03);
+}
+
+.analytics-section h2 {
+  margin: 0;
+  font-size: 22px;
+  color: #111827;
+}
+
+.analytics-placeholder {
+  margin-top: 22px;
+  min-height: 170px;
+  border: 2px dashed #d1d5db;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #6b7280;
+  background: #fafbfc;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width: 900px) {
+  .analytics-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .analytics-header-right {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .analytics-filter {
+    flex: 1;
+  }
+
+  .analytics-export-btn {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .analytics-header h1 {
+    font-size: 30px;
+  }
+}
+
+/* ===========================
+   Statistics Cards
+=========================== */
+
+.analytics-stats-grid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 22px;
+}
+
+.analytics-stat-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 22px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  transition: all .25s ease;
+  cursor: pointer;
+}
+
+.analytics-stat-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 36px rgba(15, 23, 42, .08);
+}
+
+.analytics-stat-icon {
+  width: 62px;
+  height: 62px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.analytics-stat-content span {
+  display: block;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.analytics-stat-content h3 {
+  margin-top: 6px;
+  font-size: 30px;
+  color: #111827;
+}
+
+/* Card Colors */
+
+.analytics-stat-card.blue .analytics-stat-icon {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.analytics-stat-card.green .analytics-stat-icon {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.analytics-stat-card.purple .analytics-stat-icon {
+  background: #ede9fe;
+  color: #7c3aed;
+}
+
+.analytics-stat-card.orange .analytics-stat-icon {
+  background: #ffedd5;
+  color: #ea580c;
+}
+
+.analytics-stat-card.pink .analytics-stat-icon {
+  background: #fce7f3;
+  color: #db2777;
+}
+
+.analytics-stat-card.cyan .analytics-stat-icon {
+  background: #cffafe;
+  color: #0891b2;
+}
+
+/* ===========================
+   Charts
+=========================== */
+
+.analytics-chart-grid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
+  gap: 24px;
+}
+
+.chart-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 22px;
+  transition: all .25s ease;
+}
+
+.chart-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(15, 23, 42, .08);
+}
+
+.chart-card h3 {
+  margin: 0 0 20px;
+  font-size: 18px;
+  color: #111827;
+}
+
+@media (max-width: 768px) {
+  .analytics-chart-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===========================
+   Project Analytics Table
+=========================== */
+
+.analytics-table-wrapper {
+  margin-top: 24px;
+  overflow-x: auto;
+}
+
+.analytics-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.analytics-table thead {
+  background: #f8fafc;
+}
+
+.analytics-table th {
+  padding: 18px;
+  text-align: left;
+  font-size: 14px;
+  color: #475569;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.analytics-table td {
+  padding: 18px;
+  border-bottom: 1px solid #eef2f7;
+  color: #111827;
+}
+
+.analytics-table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.analytics-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.status-badge.active {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.status-badge.review {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.status-badge.completed {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+/* ===========================
+   AI Usage Cards
+=========================== */
+
+.ai-usage-grid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 22px;
+}
+
+.ai-usage-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 24px;
+  transition: all .25s ease;
+}
+
+.ai-usage-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 36px rgba(15, 23, 42, .08);
+}
+
+.ai-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ai-card-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ai-card-top span {
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.ai-usage-card h3 {
+  margin: 20px 0 8px;
+  font-size: 32px;
+  color: #111827;
+}
+
+.ai-usage-card p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* Color Variants */
+
+.ai-usage-card.blue .ai-card-icon {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.ai-usage-card.green .ai-card-icon {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.ai-usage-card.purple .ai-card-icon {
+  background: #ede9fe;
+  color: #7c3aed;
+}
+
+.ai-usage-card.orange .ai-card-icon {
+  background: #ffedd5;
+  color: #ea580c;
+}
+
+.ai-usage-card.cyan .ai-card-icon {
+  background: #cffafe;
+  color: #0891b2;
+}
+
+/* ===========================
+   Research Insights
+=========================== */
+
+.research-insights-grid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+}
+
+.research-insight-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 24px;
+  transition: all .25s ease;
+}
+
+.research-insight-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 36px rgba(15, 23, 42, .08);
+}
+
+.research-insight-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.research-insight-card h3 {
+  margin: 0;
+  font-size: 15px;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.research-insight-card h4 {
+  margin: 10px 0;
+  font-size: 24px;
+  color: #111827;
+}
+
+.research-insight-card p {
+  margin: 0;
+  color: #6b7280;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* Color Variants */
+
+.research-insight-card.blue .research-insight-icon {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.research-insight-card.green .research-insight-icon {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.research-insight-card.purple .research-insight-icon {
+  background: #ede9fe;
+  color: #7c3aed;
+}
+
+.research-insight-card.orange .research-insight-icon {
+  background: #ffedd5;
+  color: #ea580c;
+}
+
+.research-insight-card.cyan .research-insight-icon {
+  background: #cffafe;
+  color: #0891b2;
+}
+
+.research-insight-card.pink .research-insight-icon {
+  background: #fce7f3;
+  color: #db2777;
+}
+
+/* ===========================
+   Activity Heatmap (GitHub Style)
+=========================== */
+
+.heatmap-subtitle {
+  margin-top: 8px;
+  color: #6b7280;
+}
+
+.github-heatmap {
+  margin-top: 28px;
+  overflow-x: auto;
+}
+
+.heatmap-months {
+  display: flex;
+  margin-left: 56px;
+  margin-bottom: 10px;
+}
+
+.heatmap-month-spacer {
+  width: 0;
+}
+
+.heatmap-month {
+  width: 22px;
+  text-align: center;
+  font-size: 11px;
+  color: #6b7280;
+  flex-shrink: 0;
+}
+
+.heatmap-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.heatmap-days {
+  display: grid;
+  grid-template-rows: repeat(7, 18px);
+  gap: 6px;
+  width: 44px;
+}
+
+.heatmap-day {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+.heatmap-weeks {
+  display: flex;
+  gap: 6px;
+}
+
+.heatmap-week {
+  display: grid;
+  grid-template-rows: repeat(7, 18px);
+  gap: 6px;
+}
+
+.heatmap-cell {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.heatmap-cell:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.18);
+}
+
+.level-0 {
+  background: #f3f4f6;
+}
+
+.level-1 {
+  background: #dbeafe;
+}
+
+.level-2 {
+  background: #93c5fd;
+}
+
+.level-3 {
+  background: #3b82f6;
+}
+
+.level-4 {
+  background: #1d4ed8;
+}
+
+.heatmap-legend {
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+}
+
+.heatmap-legend .heatmap-cell {
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 768px) {
+  .heatmap-body {
+    overflow-x: auto;
+  }
+
+  .heatmap-day {
+    display: none;
+  }
+
+  .heatmap-months {
+    margin-left: 0;
+  }
+}
+
+/* =========================================
+   ANALYTICS DARK MODE
+   ========================================= */
+
+html.dark .analytics-page {
+  color: #f8fafc;
+}
+
+html.dark .analytics-header,
+html.dark .analytics-section,
+html.dark .analytics-stat-card,
+html.dark .chart-card,
+html.dark .ai-usage-card,
+html.dark .research-insight-card {
+  background: #1e293b;
+  border-color: #334155;
+  color: #f8fafc;
+}
+
+html.dark .analytics-header h1,
+html.dark .analytics-section h2,
+html.dark .analytics-stat-content h3,
+html.dark .chart-card h3,
+html.dark .ai-usage-card h3,
+html.dark .research-insight-card h4 {
+  color: #f8fafc;
+}
+
+html.dark .analytics-header p,
+html.dark .analytics-stat-content span,
+html.dark .ai-card-top span,
+html.dark .ai-usage-card p,
+html.dark .research-insight-card h3,
+html.dark .research-insight-card p {
+  color: #94a3b8;
+}
+
+html.dark .analytics-filter {
+  background: #1e293b;
+  border-color: #475569;
+}
+
+html.dark .analytics-filter select {
+  color: #f8fafc;
+  background: #1e293b;
+}
+
+html.dark .analytics-table {
+  background: #1e293b;
+}
+
+html.dark .analytics-table thead {
+  background: #273449;
+}
+
+html.dark .analytics-table th {
+  color: #cbd5e1;
+  border-color: #475569;
+}
+
+html.dark .analytics-table td {
+  color: #e2e8f0;
+  border-color: #334155;
+}
+
+html.dark .analytics-table tbody tr:hover {
+  background: #273449;
+}
+
+html.dark .analytics-placeholder {
+  background: #172033;
+  border-color: #475569;
+  color: #94a3b8;
+}
+
+html.dark .heatmap-subtitle,
+html.dark .heatmap-month,
+html.dark .heatmap-day {
+  color: #94a3b8;
+}
+
+html.dark .level-0 {
+  background: #334155;
+}

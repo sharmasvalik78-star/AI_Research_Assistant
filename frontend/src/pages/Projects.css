@@ -1,0 +1,65 @@
+.projects-page {
+    padding: 30px;
+}
+
+.projects-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #111827;
+}
+
+.projects-loading {
+    text-align: center;
+    padding: 40px;
+    font-size: 18px;
+    color: #6b7280;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 20px;
+}
+
+/* =====================================================
+   Phase 33 — Projects Dark Mode
+===================================================== */
+
+html.dark .projects-title {
+    color: #f8fafc;
+}
+
+html.dark .projects-loading {
+    color: #94a3b8;
+}
+
+/* =====================================================
+   Phase 33 — Projects Page Dark Mode
+===================================================== */
+
+html.dark .projects-page {
+
+    background: #0f172a;
+
+}
+
+html.dark .min-h-screen.bg-slate-50 .border-slate-200 {
+    border-color: #374151;
+}
+
+html.dark .min-h-screen.bg-slate-50 .bg-white {
+    background: #1f2937;
+}
+
+html.dark .min-h-screen.bg-slate-50 .text-slate-900 {
+    color: #f8fafc;
+}
+
+html.dark .min-h-screen.bg-slate-50 .text-slate-600 {
+    color: #cbd5e1;
+}
+
+html.dark .min-h-screen.bg-slate-50 .text-slate-500 {
+    color: #94a3b8;
+}

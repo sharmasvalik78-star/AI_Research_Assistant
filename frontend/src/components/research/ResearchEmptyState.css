@@ -1,0 +1,182 @@
+.research-empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 70px 30px;
+
+    background: linear-gradient(
+        135deg,
+        #ffffff,
+        #f8fbff
+    );
+
+    border: 1px solid #e5e7eb;
+    border-radius: 24px;
+
+    box-shadow:
+        0 12px 35px rgba(15, 23, 42, 0.06);
+
+    animation: emptyFadeIn .35s ease;
+}
+
+.empty-state-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 110px;
+    height: 110px;
+
+    margin-bottom: 24px;
+
+    font-size: 4rem;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #eff6ff,
+        #dbeafe
+    );
+
+    box-shadow:
+        0 12px 28px rgba(37, 99, 235, 0.12);
+}
+
+.empty-state-title {
+    margin: 0 0 14px;
+
+    font-size: 2rem;
+    font-weight: 700;
+
+    color: #111827;
+}
+
+.empty-state-description {
+    max-width: 600px;
+
+    margin: 0 0 32px;
+
+    line-height: 1.8;
+
+    font-size: 1rem;
+
+    color: #6b7280;
+}
+
+.empty-state-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 14px 28px;
+
+    border-radius: 14px;
+
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #1d4ed8
+    );
+
+    color: #ffffff;
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition:
+        transform .22s ease,
+        box-shadow .22s ease,
+        filter .22s ease;
+}
+
+.empty-state-button:hover {
+    transform: translateY(-2px);
+
+    filter: brightness(1.03);
+
+    box-shadow:
+        0 12px 28px rgba(37, 99, 235, 0.28);
+}
+
+.empty-state-button:active {
+    transform: scale(0.98);
+}
+
+@keyframes emptyFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .research-empty-state {
+        padding: 50px 22px;
+    }
+
+    .empty-state-icon {
+        width: 90px;
+        height: 90px;
+
+        font-size: 3.2rem;
+    }
+
+    .empty-state-title {
+        font-size: 1.6rem;
+    }
+
+    .empty-state-description {
+        font-size: 0.95rem;
+    }
+
+    .empty-state-button {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+/* =========================================
+   RESEARCH EMPTY STATE - DARK MODE
+   ========================================= */
+
+html.dark .research-empty-state {
+    background: linear-gradient(
+        135deg,
+        #1e293b,
+        #0f172a
+    );
+
+    border-color: #334155;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+html.dark .empty-state-icon {
+    background: linear-gradient(
+        135deg,
+        #1e3a8a,
+        #1e40af
+    );
+
+    box-shadow:
+        0 12px 28px rgba(37, 99, 235, 0.20);
+}
+
+html.dark .empty-state-title {
+    color: #f8fafc;
+}
+
+html.dark .empty-state-description {
+    color: #cbd5e1;
+}
