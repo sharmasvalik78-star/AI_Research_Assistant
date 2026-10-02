@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: AI_Research_Assistant
+    rootDir: backend
+    buildCommand: pip install -r requirements_deploy.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+
+  - type: static
+    name: ai-research-assistant-frontend
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: frontend/dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
