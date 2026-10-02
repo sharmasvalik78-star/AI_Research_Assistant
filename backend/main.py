@@ -23,8 +23,9 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-    "http://localhost:5173",
-    "http://localhost:4173",
+        "http://localhost:5173",
+        "http://localhost:4173",
+        "https://ai-research-assistant-frontend-o90w.onrender.com",
     ],
     allow_credentials=True,
     allow_methods=["*"],
