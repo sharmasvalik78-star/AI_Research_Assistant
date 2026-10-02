@@ -12,7 +12,7 @@ email-validator
 pydantic-settings
 chromadb
 sentence-transformers
-google-generativeai
+google-genai
 pypdf
 PyMuPDF
 python-docx
