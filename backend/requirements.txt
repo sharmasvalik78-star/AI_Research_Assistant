@@ -20,3 +20,5 @@ pandas
 numpy
 reportlab
 resend
+grpcio>=1.75.1,<2.0.0
+grpcio-status>=1.75.1,<2.0.0
