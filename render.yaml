@@ -4,7 +4,7 @@ services:
     name: AI_Research_Assistant
     rootDir: backend
     buildCommand: pip install -r requirements_deploy.txt
-    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    startCommand: alembic upgrade head && uvicorn main:app --host 0.0.0.0 --port $PORT
 
   - type: web
     runtime: static
