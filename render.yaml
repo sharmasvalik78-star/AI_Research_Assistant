@@ -1,5 +1,6 @@
 services:
   - type: web
+    runtime: python
     name: AI_Research_Assistant
     rootDir: backend
     buildCommand: pip install -r requirements_deploy.txt
